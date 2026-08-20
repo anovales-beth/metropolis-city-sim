@@ -430,6 +430,26 @@ function Game() {
               >
                 <div className="font-display text-lg font-bold group-hover:text-primary">{opt.label}</div>
                 <p className="mt-1 text-sm text-muted-foreground">{opt.detail}</p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {METRIC_META.map((m) => {
+                    const delta = opt.effects[m.key] ?? 0;
+                    return (
+                      <span
+                        key={m.key}
+                        className={`inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-bold ${
+                          delta > 0
+                            ? "bg-good/15 text-good"
+                            : delta < 0
+                              ? "bg-bad/15 text-bad"
+                              : "bg-muted text-muted-foreground"
+                        }`}
+                      >
+                        <m.icon className={`size-3 ${delta === 0 ? "" : m.text}`} />
+                        {delta > 0 ? `+${delta}` : delta === 0 ? "0" : delta} {m.emoji}
+                      </span>
+                    );
+                  })}
+                </div>
               </button>
             ))}
           </div>
