@@ -259,7 +259,7 @@ function Game() {
   const [dead, setDead] = useState<keyof Metrics | null>(null);
   const [finished, setFinished] = useState(false);
 
-  const card = EVENTS[Math.min(turn, EVENTS.length - 1)];
+  const card = EVENTS[Math.min(turn, EVENTS.length - 1)]!;
 
   function choose(opt: Option) {
     if (feedback) return;
