@@ -68,7 +68,6 @@ const EVENTS: EventCard[] = [
     title: "Electrificación del Transporte",
     emoji: "🚌",
     description: "El municipio puede renovar la flota de colectivos. Los eléctricos cuestan mucho más pero son silenciosos y limpios. Los de siempre son más baratos pero siguen contaminando.",
-,
     options: [
       {
         label: "Comprar buses eléctricos",
