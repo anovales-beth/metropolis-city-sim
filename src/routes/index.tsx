@@ -50,10 +50,10 @@ const EVENTS: EventCard[] = [
     title: "El Centro Peatonal",
     emoji: "🚶",
     description:
-      "Los comerciantes del centro dicen que sin autos venderán menos. Los vecinos piden veredas anchas y ciclovías.",
+      "Los comerciantes del centro están preocupados por la propuesta de hacer peatonales 3 cuadras del centro. Dicen que perderán clientes, pero los vecinos quieren calles más seguras y limpias.",
     options: [
       {
-        label: "Peatonalizar y sumar ciclovías",
+        label: "Hacer las peatonales y sumar ciclovías",
         detail: "Calles solo para personas y bicis en el casco histórico.",
         effects: { eco: 15, people: -10, money: -10, flow: 10 },
       },
@@ -67,17 +67,18 @@ const EVENTS: EventCard[] = [
   {
     title: "Electrificación del Transporte",
     emoji: "🚌",
-    description: "Hay que renovar la flota de colectivos. ¿Eléctricos silenciosos o diésel moderno más barato?",
+    description: "El municipio puede renovar la flota de colectivos. Los eléctricos cuestan mucho más pero son silenciosos y limpios. Los de siempre son más baratos pero siguen contaminando.",
+,
     options: [
       {
         label: "Comprar buses eléctricos",
         detail: "Cero humo, pero carísimos y hay que instalar cargadores.",
-        effects: { eco: 20, people: 10, money: -25, flow: 5 },
+        effects: { eco: 20, people: 10, money: -25, flow: 10 },
       },
       {
-        label: "Comprar diésel moderno",
+        label: "Comprar los de siempre",
         detail: "Más unidades por el mismo dinero, pero contaminan.",
-        effects: { eco: -15, people: 5, money: 10, flow: 10 },
+        effects: { eco: -15, people: 5, money: -5, flow: 10 },
       },
     ],
   },
@@ -110,13 +111,13 @@ const EVENTS: EventCard[] = [
       },
       {
         label: "Aumentar la tarifa",
-        detail: "Más fondos para obras, pero bronca en las paradas.",
+        detail: "Más fondos para obras, pero enojo en la gente.",
         effects: { eco: -8, people: -20, money: 25, flow: -5 },
       },
     ],
   },
   {
-    title: "Carriles Exclusivos BRT",
+    title: "Carriles Exclusivos Metrobús",
     emoji: "🚏",
     description: "Se puede sacar un carril de autos en la avenida principal para un metrobús rápido.",
     options: [
@@ -127,7 +128,7 @@ const EVENTS: EventCard[] = [
       },
       {
         label: "Dejar el tránsito libre",
-        detail: "Todos los carriles siguen siendo para autos.",
+        detail: "Todos los carriles siguen siendo para autos y colectivos juntos.",
         effects: { eco: -12, people: 8, money: 0, flow: -12 },
       },
     ],
@@ -167,7 +168,7 @@ const EVENTS: EventCard[] = [
     ],
   },
   {
-    title: "Teleférico o Subte Urbano",
+    title: "El Teleférico",
     emoji: "🚡",
     description: "El barrio alto queda lejos de todo. ¿Megaobra de transporte o arreglar los baches de siempre?",
     options: [
